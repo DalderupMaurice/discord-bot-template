@@ -1,4 +1,5 @@
 import * as dotenv from "dotenv";
+import { IBotConfig } from "../interfaces";
 
 const result = dotenv.config();
 
@@ -7,10 +8,10 @@ if (result.error) {
 }
 
 const CONFIG = {
-  TOKEN: process.env.TOKEN,
-  PREFIX: process.env.PREFIX,
-  COMMANDS: process.env.COMMANDS,
-  ACTIVITY: process.env.ACTIVITY
-};
+  token: process.env.TOKEN as string,
+  prefix: process.env.PREFIX as string,
+  commands: process.env.COMMANDS?.split(",") as string[],
+  activity: process.env.ACTIVITY as string
+} as IBotConfig;
 
 export default CONFIG;

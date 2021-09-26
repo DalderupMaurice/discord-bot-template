@@ -12,13 +12,10 @@ export default class Bot extends Client implements IBot {
 
   logger: ILogger;
 
-  client: Bot;
-
   botId: string;
 
   public constructor(config: IBotConfig) {
     super({ intents: [Intents.FLAGS.GUILDS] });
-    this.client = this;
 
     this.botId = "";
     this.logger = consola;
@@ -27,23 +24,23 @@ export default class Bot extends Client implements IBot {
   }
 
   start(commandsPath: string, dataPath: string): void {
-    this.loadCommands(commandsPath, dataPath);
+    // this.loadCommands(commandsPath, dataPath);
 
     if (!this.config.token) {
       throw new Error("No discord token given");
     }
 
-    this.client.on("ready", () => {
-      this.botId = this.client.user!.id;
+    this.on("ready", () => {
+      this.botId = this.user!.id;
 
       if (this.config.activity) {
-        this.client.user!.setActivity(this.config.activity);
+        this.user!.setActivity(this.config.activity);
       }
 
-      this.logger.success("started...");
+      this.logger.success(`Logged in as ${this.user?.tag}!`);
     });
 
-    this.client.on("message", async (message) => {
+    this.on("message", async (message) => {
       if (
         !message.author.bot &&
         message.content.startsWith(this.config.prefix)
@@ -72,7 +69,7 @@ export default class Bot extends Client implements IBot {
       }
     });
 
-    this.client.login(this.config.token);
+    this.login(this.config.token);
   }
 
   private loadCommands(commandsPath: string, dataPath: string) {
