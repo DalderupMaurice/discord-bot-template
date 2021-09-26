@@ -1,5 +1,6 @@
 import { Client, Intents } from "discord.js";
 import consola from "consola";
+import CONFIG from "./config";
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -15,4 +16,4 @@ client.on("interactionCreate", async (interaction) => {
   }
 });
 
-client.login("token");
+client.login(CONFIG.TOKEN);
