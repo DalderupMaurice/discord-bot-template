@@ -2,8 +2,8 @@ import consola from "consola";
 import { Client, Collection, Intents } from "discord.js";
 import fs from "fs";
 import { REST } from "@discordjs/rest";
-
 import { Routes } from "discord-api-types/v9";
+
 import {
   IBot,
   IBotCommand,
@@ -45,8 +45,6 @@ export default class Bot extends Client<true> implements IBot {
   async registerCommands(): Promise<void> {
     const rest = new REST({ version: "9" }).setToken(this.config.token);
     try {
-      this.logger.info("Started refreshing application (/) commands.");
-
       await rest.put(
         Routes.applicationGuildCommands(
           this.config.applicationId,
@@ -57,7 +55,35 @@ export default class Bot extends Client<true> implements IBot {
         }
       );
 
-      this.logger.success("Successfully reloaded application (/) commands.");
+      this.logger.success("Successfully RELOADED application (/) commands.");
+    } catch (error) {
+      this.logger.error(error);
+    }
+  }
+
+  async deleteCommands(): Promise<void> {
+    const rest = new REST({ version: "9" }).setToken(this.config.token);
+    try {
+      const result = (await rest.get(
+        Routes.applicationGuildCommands(
+          this.config.applicationId,
+          this.config.guildId
+        )
+      )) as { id: string }[];
+
+      const promises = result.map((cmd) => {
+        return rest.delete(
+          Routes.applicationGuildCommand(
+            this.config.applicationId,
+            this.config.guildId,
+            cmd.id
+          )
+        );
+      });
+
+      await Promise.all(promises);
+
+      this.logger.success("Successfully DELETED application (/) commands.");
     } catch (error) {
       this.logger.error(error);
     }
