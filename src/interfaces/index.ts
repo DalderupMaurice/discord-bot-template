@@ -12,7 +12,7 @@ export interface ILogger extends Consola {}
 
 export interface IBotConfig {
   token: string;
-  clientId: string;
+  applicationId: string;
   guildId: string;
   register: boolean;
   activity?: string;
@@ -24,7 +24,7 @@ export interface IBot extends Client<true> {
 
   loadCommands(): Promise<void>;
   registerCommands(): Promise<void>;
-  start(): void;
+  start(): Promise<void>;
 }
 
 export interface IBotCommand {

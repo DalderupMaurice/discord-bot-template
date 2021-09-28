@@ -9,7 +9,7 @@ export default class PingCommand implements IBotCommand {
   constructor() {
     this.name = "ping";
     this.data = new SlashCommandBuilder()
-      .setName("ping")
+      .setName(this.name)
       .setDescription("Replies with Pong!");
   }
 

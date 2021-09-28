@@ -49,7 +49,7 @@ export default class Bot extends Client<true> implements IBot {
 
       await rest.put(
         Routes.applicationGuildCommands(
-          this.config.clientId,
+          this.config.applicationId,
           this.config.guildId
         ),
         {
@@ -63,7 +63,7 @@ export default class Bot extends Client<true> implements IBot {
     }
   }
 
-  start(): void {
+  async start(): Promise<void> {
     if (!this.config.token) {
       throw new Error("No discord token given");
     }
@@ -82,6 +82,6 @@ export default class Bot extends Client<true> implements IBot {
       }
     });
 
-    this.login(this.config.token);
+    await this.login(this.config.token);
   }
 }

@@ -9,5 +9,5 @@ import Client from "./Client";
     await client.registerCommands();
   }
 
-  client.start();
+  await client.start();
 })();
