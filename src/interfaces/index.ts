@@ -1,34 +1,44 @@
+import { SlashCommandBuilder } from "@discordjs/builders";
 import { Consola } from "consola";
-import { ColorResolvable } from "discord.js";
+import {
+  Client,
+  ClientEvents,
+  Collection,
+  ColorResolvable,
+  CommandInteraction
+} from "discord.js";
 
 export interface ILogger extends Consola {}
 
 export interface IBotConfig {
-  prefix: string;
   token: string;
-  commands: string[];
+  clientId: string;
+  guildId: string;
+  register: boolean;
   activity?: string;
 }
-
-export interface IBotCommandHelp {
-  caption: string;
-  description: string;
-}
-
-export interface IBot {
-  readonly botId: string;
-  readonly commands: IBotCommand[];
+export interface IBot extends Client<true> {
+  readonly commands: Collection<string, IBotCommand>;
   readonly logger: ILogger;
   readonly config: IBotConfig;
 
-  start(commandsPath: string, dataPath: string): void;
+  loadCommands(): Promise<void>;
+  registerCommands(): Promise<void>;
+  start(): void;
 }
 
 export interface IBotCommand {
-  getHelp(): IBotCommandHelp;
-  init(bot: IBot, dataPath: string): void;
-  isValid(msg: string): boolean;
-  process(msg: string, answer: IBotMessage): Promise<void>;
+  readonly name: string;
+  readonly data: SlashCommandBuilder;
+
+  execute(interaction: CommandInteraction): Promise<void>;
+}
+
+export interface IBotEvent {
+  readonly name: keyof ClientEvents;
+  readonly once: boolean;
+
+  execute(...args: any[]): Promise<void>;
 }
 
 export interface IUser {

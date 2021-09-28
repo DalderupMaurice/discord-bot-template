@@ -23,7 +23,8 @@
     "plugin:import/typescript" // plugin-import config
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "@typescript-eslint/lines-between-class-members": "off"
   },
   "settings": {
     "import/resolver": {
