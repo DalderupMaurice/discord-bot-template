@@ -122,35 +122,38 @@ export default class Command implements ICommand {
   }
 
   async deleteGuildCommands(): Promise<void> {
-    this.logger.info("Deleting Guild application (/) commands.");
-
     const commands = await this.getGuildCommands();
 
-    const promises = commands.map(async (cmd) => {
-      this.rest.delete(
-        Routes.applicationGuildCommand(
-          this.config.applicationId,
-          this.config.guildId,
-          cmd.id
-        )
-      );
-    });
+    if (commands.length > 0) {
+      this.logger.info(`Deleting ${commands.length} Guild command(s).`);
+      const promises = commands.map(async (cmd) => {
+        this.rest.delete(
+          Routes.applicationGuildCommand(
+            this.config.applicationId,
+            this.config.guildId,
+            cmd.id
+          )
+        );
+      });
 
-    await Promise.all(promises);
+      await Promise.all(promises);
+    }
   }
 
   async deleteGlobalCommands(): Promise<void> {
-    this.logger.info("Deleting Global application (/) commands.");
-
     const commands = await this.getGlobalCommands();
 
-    const promises = commands.map(async (cmd) => {
-      this.rest.delete(
-        Routes.applicationCommand(this.config.applicationId, cmd.id)
-      );
-    });
+    if (commands.length > 0) {
+      this.logger.info(`Deleting ${commands.length} Global command(s).`);
 
-    await Promise.all(promises);
+      const promises = commands.map(async (cmd) => {
+        this.rest.delete(
+          Routes.applicationCommand(this.config.applicationId, cmd.id)
+        );
+      });
+
+      await Promise.all(promises);
+    }
   }
 
   async deleteCommands(): Promise<void> {
