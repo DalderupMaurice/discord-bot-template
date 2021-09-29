@@ -1,1 +1,1 @@
-# typescript-project-setup
+# Discord bot template
