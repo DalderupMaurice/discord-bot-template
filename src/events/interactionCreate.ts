@@ -14,7 +14,7 @@ export default class InteractionCreateEvent implements IBotEvent {
     if (!interaction.isCommand()) return;
 
     const client = interaction.client as IBot;
-    const command = client.commands.get(interaction.commandName);
+    const command = client.command.commands.get(interaction.commandName);
 
     if (!command) return;
 
