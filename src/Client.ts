@@ -1,20 +1,13 @@
 import consola from "consola";
-import { Client, Collection, Intents } from "discord.js";
+import { Client, Intents } from "discord.js";
 import fs from "fs";
-import { REST } from "@discordjs/rest";
-import { Routes } from "discord-api-types/v9";
 
-import {
-  IBot,
-  IBotCommand,
-  IBotConfig,
-  IBotEvent,
-  ILogger
-} from "./interfaces";
+import { IBot, IBotConfig, IBotEvent, ICommand, ILogger } from "./interfaces";
+import Command from "./Command";
 
 export default class Bot extends Client<true> implements IBot {
   config: IBotConfig;
-  commands: Collection<string, IBotCommand>;
+  command: ICommand;
   logger: ILogger;
 
   public constructor(config: IBotConfig) {
@@ -22,71 +15,7 @@ export default class Bot extends Client<true> implements IBot {
 
     this.logger = consola;
     this.config = config;
-    this.commands = new Collection();
-  }
-
-  async loadCommands(): Promise<void> {
-    const commandFiles = fs
-      .readdirSync(`${__dirname}/commands`)
-      .filter((file) => file.endsWith(".ts"));
-
-    const promises = commandFiles.map(async (file) => {
-      const CmdClass = (await import(`${__dirname}/commands/${file}`)).default;
-      const command: IBotCommand = new CmdClass();
-      this.commands.set(command.name, command);
-      this.logger.info(`command "${command.name}" loaded...`);
-    });
-
-    await Promise.all(promises);
-
-    this.logger.info(`Loaded all ${this.commands.size} commands`);
-  }
-
-  async registerCommands(): Promise<void> {
-    const rest = new REST({ version: "9" }).setToken(this.config.token);
-    try {
-      await rest.put(
-        Routes.applicationGuildCommands(
-          this.config.applicationId,
-          this.config.guildId
-        ),
-        {
-          body: this.commands.mapValues((cmd) => cmd.data.toJSON())
-        }
-      );
-
-      this.logger.success("Successfully RELOADED application (/) commands.");
-    } catch (error) {
-      this.logger.error(error);
-    }
-  }
-
-  async deleteCommands(): Promise<void> {
-    const rest = new REST({ version: "9" }).setToken(this.config.token);
-    try {
-      const result = (await rest.get(
-        Routes.applicationGuildCommands(
-          this.config.applicationId,
-          this.config.guildId
-        )
-      )) as { id: string }[];
-
-      const promises = result.map((cmd) => {
-        return rest.delete(
-          Routes.applicationGuildCommand(
-            this.config.applicationId,
-            this.config.guildId,
-            cmd.id
-          )
-        );
-      });
-
-      await Promise.all(promises);
-
-      this.logger.success("Successfully DELETED application (/) commands.");
-    } catch (error) {
-      this.logger.error(error);
-    }
+    this.command = new Command(this.config);
   }
 
   async start(): Promise<void> {
@@ -108,6 +37,13 @@ export default class Bot extends Client<true> implements IBot {
       }
     });
 
+    // Load the commands
+    await this.command.loadCommands();
+
+    // (Re-)Register the loaded commands
+    await this.command.registerCommands();
+
+    // Login to discord
     await this.login(this.config.token);
   }
 }

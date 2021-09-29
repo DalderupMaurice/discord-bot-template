@@ -11,8 +11,7 @@ const CONFIG = {
   token: process.env.TOKEN as string,
   activity: process.env.ACTIVITY as string,
   applicationId: process.env.APPLICATION_ID as string,
-  guildId: process.env.GUILD_ID as string,
-  register: process.env.REGISTER === "true"
+  guildId: process.env.GUILD_ID as string
 } as IBotConfig;
 
 export default CONFIG;

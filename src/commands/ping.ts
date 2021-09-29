@@ -4,10 +4,12 @@ import { IBotCommand } from "../interfaces";
 
 export default class PingCommand implements IBotCommand {
   name: string;
+  global: boolean;
   data: SlashCommandBuilder;
 
   constructor() {
     this.name = "ping";
+    this.global = true;
     this.data = new SlashCommandBuilder()
       .setName(this.name)
       .setDescription("Replies with Pong!");

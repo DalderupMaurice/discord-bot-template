@@ -1,4 +1,5 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
+import { REST } from "@discordjs/rest";
 import { Consola } from "consola";
 import {
   Client,
@@ -14,21 +15,39 @@ export interface IBotConfig {
   token: string;
   applicationId: string;
   guildId: string;
-  register: boolean;
   activity?: string;
 }
 export interface IBot extends Client<true> {
+  readonly logger: ILogger;
+  readonly config: IBotConfig;
+  readonly command: ICommand;
+
+  start(): Promise<void>;
+}
+
+export interface ICommand {
+  readonly rest: REST;
   readonly commands: Collection<string, IBotCommand>;
+  readonly globalCommands: Collection<string, IBotCommand>;
+  readonly guildCommands: Collection<string, IBotCommand>;
   readonly logger: ILogger;
   readonly config: IBotConfig;
 
   loadCommands(): Promise<void>;
+  getCommands(): Promise<{ id: string }[]>;
+  getGuildCommands(): Promise<{ id: string }[]>;
+  getGlobalCommands(): Promise<{ id: string }[]>;
   registerCommands(): Promise<void>;
-  start(): Promise<void>;
+  registerGuildCommands(): Promise<void>;
+  registerGlobalCommands(): Promise<void>;
+  deleteCommands(): Promise<void>;
+  deleteGuildCommands(): Promise<void>;
+  deleteGlobalCommands(): Promise<void>;
 }
 
 export interface IBotCommand {
   readonly name: string;
+  readonly global: boolean;
   readonly data: SlashCommandBuilder;
 
   execute(interaction: CommandInteraction): Promise<void>;
