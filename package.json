@@ -15,8 +15,8 @@
   },
   "devDependencies": {
     "@types/node": "16.9.1",
-    "@typescript-eslint/eslint-plugin": "4.31.1",
-    "@typescript-eslint/parser": "4.31.1",
+    "@typescript-eslint/eslint-plugin": "4.32.0",
+    "@typescript-eslint/parser": "4.32.0",
     "@yarnpkg/pnpify": "3.0.1-rc.8",
     "eslint": "7.32.0",
     "eslint-config-airbnb-base": "14.2.1",
