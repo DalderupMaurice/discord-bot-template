@@ -71,16 +71,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/builders@npm:0.7.0":
-  version: 0.7.0
-  resolution: "@discordjs/builders@npm:0.7.0"
+"@discordjs/builders@npm:0.8.1":
+  version: 0.8.1
+  resolution: "@discordjs/builders@npm:0.8.1"
   dependencies:
     "@sindresorhus/is": ^4.2.0
     discord-api-types: ^0.24.0
-    ow: ^0.27.0
+    ow: ^0.28.1
     ts-mixer: ^6.0.0
     tslib: ^2.3.1
-  checksum: d2c090412d25042952e241e88197b77fe8d204b724bf0d5044e2b99a0548517e9d087c688b8342029e8d05bf32b63ff2b656a1e0e70c36eba10674845d9305e4
+  checksum: 4780715f18a3113ef44b7c8a875f0dcfe276e3b45cc046ddeecb1a9e260a9d90369dce5e9123e02597793445ca7bf9430d268d3220e50a2ca9e05048f09e7e6a
   languageName: node
   linkType: hard
 
@@ -3270,6 +3270,20 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"ow@npm:^0.28.1":
+  version: 0.28.1
+  resolution: "ow@npm:0.28.1"
+  dependencies:
+    "@sindresorhus/is": ^4.2.0
+    callsites: ^3.1.0
+    dot-prop: ^6.0.1
+    lodash.isequal: ^4.5.0
+    type-fest: ^2.3.4
+    vali-date: ^1.0.0
+  checksum: 151c3a90d767b907c0842993145432733962a0265eab70dad917d3b09ab5cc29946057b677431beec58fabfbc038d98327e22fc2b47a2e53a698b7969b29e3ce
+  languageName: node
+  linkType: hard
+
 "p-cancelable@npm:^2.0.0":
   version: 2.1.1
   resolution: "p-cancelable@npm:2.1.1"
@@ -4319,11 +4333,18 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"type-fest@npm:^2.3.4":
+  version: 2.5.2
+  resolution: "type-fest@npm:2.5.2"
+  checksum: 77b3abd843667570eae295a835a94863a6c64b917b96e20215c6a98c27baacb7c0ac577ef80c28e50dea0a8089e2190cd3f2bd0198e68c0bbfb266346133f0fa
+  languageName: node
+  linkType: hard
+
 "typescript-project-setup@workspace:.":
   version: 0.0.0-use.local
   resolution: "typescript-project-setup@workspace:."
   dependencies:
-    "@discordjs/builders": 0.7.0
+    "@discordjs/builders": 0.8.1
     "@discordjs/rest": 0.1.0-canary.0
     "@types/node": 16.11.6
     "@typescript-eslint/eslint-plugin": 5.2.0
