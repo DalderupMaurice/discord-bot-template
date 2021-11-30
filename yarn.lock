@@ -1396,10 +1396,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:0.24.0, discord-api-types@npm:^0.24.0":
-  version: 0.24.0
-  resolution: "discord-api-types@npm:0.24.0"
-  checksum: b1a17cb3be4ade974193cedb92fb37e51ba8f1832dfe3ec0d188ba41f255f3dab8359c9d618d32469f1e648126258f9d6ed8828dc1cb50b74d9fd9d875f3390a
+"discord-api-types@npm:0.25.2":
+  version: 0.25.2
+  resolution: "discord-api-types@npm:0.25.2"
+  checksum: bb80a9db706d8ae391ab5eae4536827832ffe744b69659029597aaf90d9b9ece6e9642bd44eb3f38b32a3783ad1eebce378403fc785ca5405f8b71d8d32678a5
   languageName: node
   linkType: hard
 
@@ -1407,6 +1407,13 @@ __metadata:
   version: 0.18.1
   resolution: "discord-api-types@npm:0.18.1"
   checksum: 05e56e7219492cba3075d6d7750bb84b935ea21fe760b2b6f7bbdc2c896b986e6b725f10645e91242cd8d20a409e6f7d8ac1c77cbd40bd14bc144349b2959939
+  languageName: node
+  linkType: hard
+
+"discord-api-types@npm:^0.24.0":
+  version: 0.24.0
+  resolution: "discord-api-types@npm:0.24.0"
+  checksum: b1a17cb3be4ade974193cedb92fb37e51ba8f1832dfe3ec0d188ba41f255f3dab8359c9d618d32469f1e648126258f9d6ed8828dc1cb50b74d9fd9d875f3390a
   languageName: node
   linkType: hard
 
@@ -4396,7 +4403,7 @@ fsevents@~2.3.2:
     "@typescript-eslint/parser": 5.5.0
     "@yarnpkg/pnpify": 3.1.0
     consola: 2.15.3
-    discord-api-types: 0.24.0
+    discord-api-types: 0.25.2
     discord.js: 13.3.1
     dotenv: 10.0.0
     eslint: 8.3.0
