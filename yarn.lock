@@ -2643,9 +2643,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.1.7":
-  version: 12.1.7
-  resolution: "lint-staged@npm:12.1.7"
+"lint-staged@npm:12.2.2":
+  version: 12.2.2
+  resolution: "lint-staged@npm:12.2.2"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -2662,7 +2662,7 @@ fsevents@~2.3.2:
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 3d0757706c8b0ca3f004bb2ffa89a9d5fc97ccdebfa4cde29a9636c661538780e194b99cbc5e4b8b89b13986187b33c97e009b09014511bbd45ee05ba557d0eb
+  checksum: 27db9c9e88d2c0835c16679de9a98a0909ea09b90f5be3179c7d0ae21e85547e7776349df9654e61c71833d18a0162833cd726df3a70022ba10708ccec08b17d
   languageName: node
   linkType: hard
 
@@ -4218,7 +4218,7 @@ fsevents@~2.3.2:
     eslint-plugin-import: 2.25.4
     eslint-plugin-prettier: 4.0.0
     husky: 7.0.4
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
