@@ -1526,9 +1526,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-airbnb-typescript@npm:16.1.2":
-  version: 16.1.2
-  resolution: "eslint-config-airbnb-typescript@npm:16.1.2"
+"eslint-config-airbnb-typescript@npm:16.1.3":
+  version: 16.1.3
+  resolution: "eslint-config-airbnb-typescript@npm:16.1.3"
   dependencies:
     eslint-config-airbnb-base: ^15.0.0
   peerDependencies:
@@ -1536,7 +1536,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.0.0
     eslint: ^7.32.0 || ^8.2.0
     eslint-plugin-import: ^2.25.3
-  checksum: ad3709037e1ab341032acf3152e334d8dad452fa66703b394b75c55467be2153092ec2ced545256a27e29bdc58a5e72f7ba4cbf2ac3388b09f9d6582eb384734
+  checksum: 50ded56ee3629df24a9d87aa8acc5b2759d8dfa4da371cfb8c6d37d470425c69dc40f1c394f40df0072170dd089950e9a41599fc4ec2bc01f9e93a99671a757b
   languageName: node
   linkType: hard
 
@@ -2600,9 +2600,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.3.5":
-  version: 12.3.5
-  resolution: "lint-staged@npm:12.3.5"
+"lint-staged@npm:12.3.7":
+  version: 12.3.7
+  resolution: "lint-staged@npm:12.3.7"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -2614,12 +2614,13 @@ fsevents@~2.3.2:
     micromatch: ^4.0.4
     normalize-path: ^3.0.0
     object-inspect: ^1.12.0
+    pidtree: ^0.5.0
     string-argv: ^0.3.1
     supports-color: ^9.2.1
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 6653c7078b36741e521e5f309b56bb75db198a05cbdd188124ff82a290e352ade3eb1e6080265729e19711ac08d190e300874af00e4e540b57b3c8f0690e2573
+  checksum: b595097556880eb2ab7ce2cf105047f6f22525ccfd608fbdc63ab243259aa36a26949576fadff673748fb885e7cb37ad3f4471d964ad54c1205d57a58999ba24
   languageName: node
   linkType: hard
 
@@ -3235,6 +3236,15 @@ fsevents@~2.3.2:
   version: 2.3.0
   resolution: "picomatch@npm:2.3.0"
   checksum: 16818720ea7c5872b6af110760dee856c8e4cd79aed1c7a006d076b1cc09eff3ae41ca5019966694c33fbd2e1cc6ea617ab10e4adac6df06556168f13be3fca2
+  languageName: node
+  linkType: hard
+
+"pidtree@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "pidtree@npm:0.5.0"
+  bin:
+    pidtree: bin/pidtree.js
+  checksum: 371cd14bbc9bdee2a6a44596dd521dd3565e223481e0b1afffdca3f1c29831850bfa7784114dc30d245d37e7d186cec035e036256b39f75d878d19498fe0df6a
   languageName: node
   linkType: hard
 
@@ -4146,12 +4156,12 @@ fsevents@~2.3.2:
     dotenv: 16.0.0
     eslint: 8.11.0
     eslint-config-airbnb-base: 15.0.0
-    eslint-config-airbnb-typescript: 16.1.2
+    eslint-config-airbnb-typescript: 16.1.3
     eslint-config-prettier: 8.5.0
     eslint-plugin-import: 2.25.4
     eslint-plugin-prettier: 4.0.0
     husky: 7.0.4
-    lint-staged: 12.3.5
+    lint-staged: 12.3.7
     prettier: 2.6.0
     ts-node: 10.7.0
     ts-node-dev: 1.1.8
