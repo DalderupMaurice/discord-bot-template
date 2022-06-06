@@ -37,7 +37,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/builders@npm:0.13.0, @discordjs/builders@npm:^0.13.0":
+"@discordjs/builders@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@discordjs/builders@npm:0.15.0"
+  dependencies:
+    "@sapphire/shapeshift": ^3.1.0
+    "@sindresorhus/is": ^4.6.0
+    discord-api-types: ^0.33.3
+    fast-deep-equal: ^3.1.3
+    ts-mixer: ^6.0.1
+    tslib: ^2.4.0
+  checksum: 1a8a4ffe048243ebb9fbbc76a113e4994c68904a5b3d256a6b10c0123f1d0fb58b45809d134ba993293fb2190c9f3506663ddfb5068a86ec6b9c53b5db61f6a6
+  languageName: node
+  linkType: hard
+
+"@discordjs/builders@npm:^0.13.0":
   version: 0.13.0
   resolution: "@discordjs/builders@npm:0.13.0"
   dependencies:
@@ -205,6 +219,13 @@ __metadata:
   version: 2.0.0
   resolution: "@sapphire/shapeshift@npm:2.0.0"
   checksum: e866aa714d70b0c0d607ed9ad831c039b396cca30611691c59a6e43cb369cf23d69404560105101231f56128022b0030a5201c074193da324ad4345c6d06992c
+  languageName: node
+  linkType: hard
+
+"@sapphire/shapeshift@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@sapphire/shapeshift@npm:3.1.0"
+  checksum: d28035fe9dd2b59feda24daad4ae5f3ae16bf98312e726df85c79cf071de3447a2a0e81f818471a7abb8d6678423e7e6ece57687d162269624e503e62cae26a4
   languageName: node
   linkType: hard
 
@@ -1383,6 +1404,13 @@ __metadata:
   version: 0.31.1
   resolution: "discord-api-types@npm:0.31.1"
   checksum: 5a18e512b549b75d55892b0dbc2dc7c46526bee0d001b73d41d144f4653de847c96b9c57342a32479af738f46acd80ee21686dced9fe0184dcac86b669b31f18
+  languageName: node
+  linkType: hard
+
+"discord-api-types@npm:^0.33.3":
+  version: 0.33.4
+  resolution: "discord-api-types@npm:0.33.4"
+  checksum: 900fe88caedd215d3cc89a3ac39da4ee5d0d80e08149790bbaaea48d0c9029d72ff6936870ac5055af4f5de04ebffeba6f80fa2c0a00d37d784bd72bb914114e
   languageName: node
   linkType: hard
 
@@ -4216,6 +4244,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "tslib@npm:2.4.0"
+  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
 "tsutils@npm:^3.21.0":
   version: 3.21.0
   resolution: "tsutils@npm:3.21.0"
@@ -4268,7 +4303,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "typescript-project-setup@workspace:."
   dependencies:
-    "@discordjs/builders": 0.13.0
+    "@discordjs/builders": 0.15.0
     "@discordjs/rest": 0.4.1
     "@types/node": 16.11.38
     "@typescript-eslint/eslint-plugin": 5.27.0
