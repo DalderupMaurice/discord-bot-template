@@ -40,7 +40,7 @@
     "*.{ts,tsx}": "yarn lint:fix"
   },
   "dependencies": {
-    "@discordjs/builders": "0.13.0",
+    "@discordjs/builders": "0.15.0",
     "@discordjs/rest": "0.4.1",
     "consola": "2.15.3",
     "discord-api-types": "0.33.3",
