@@ -37,7 +37,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/builders@npm:0.16.0, @discordjs/builders@npm:^0.16.0":
+"@discordjs/builders@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@discordjs/builders@npm:1.0.0"
+  dependencies:
+    "@sapphire/shapeshift": ^3.5.1
+    discord-api-types: ^0.36.2
+    fast-deep-equal: ^3.1.3
+    ts-mixer: ^6.0.1
+    tslib: ^2.4.0
+  checksum: eeb627c772a2bd1fea1bddd58d46d391c30d0e2411cc3976386b7efc2048724e6bfd204ba848724ebd6d04791b358637c3a9eee878f924ef525c4920bfbfa2de
+  languageName: node
+  linkType: hard
+
+"@discordjs/builders@npm:^0.16.0":
   version: 0.16.0
   resolution: "@discordjs/builders@npm:0.16.0"
   dependencies:
@@ -4348,7 +4361,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "typescript-project-setup@workspace:."
   dependencies:
-    "@discordjs/builders": 0.16.0
+    "@discordjs/builders": 1.0.0
     "@discordjs/rest": 0.6.0
     "@types/node": 16.11.45
     "@typescript-eslint/eslint-plugin": 5.30.7
