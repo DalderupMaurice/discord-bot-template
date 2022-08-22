@@ -1461,10 +1461,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:0.37.3":
-  version: 0.37.3
-  resolution: "discord-api-types@npm:0.37.3"
-  checksum: 35451bfcac67c3c32fdc78eec79649a4a4c07132e14b661f797c61f30cedaf5202066aaf7f39d1ae1143262be07a93257b3c302699814884d2beed1572d1beff
+"discord-api-types@npm:0.37.4":
+  version: 0.37.4
+  resolution: "discord-api-types@npm:0.37.4"
+  checksum: 18b74acfcd5f6c554668eb5cb31a5db9076dfb5cb6b5c538a342ab9d22816644bada22a66285468fe7dd9980287921d5d50ba3b11cc8e391fe4f09e761bcd179
   languageName: node
   linkType: hard
 
@@ -4516,7 +4516,7 @@ fsevents@~2.3.2:
     "@typescript-eslint/parser": 5.33.1
     "@yarnpkg/pnpify": 3.1.4
     consola: 2.15.3
-    discord-api-types: 0.37.3
+    discord-api-types: 0.37.4
     discord.js: 13.10.2
     dotenv: 16.0.1
     eslint: 8.22.0

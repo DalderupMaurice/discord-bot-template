@@ -43,7 +43,7 @@
     "@discordjs/builders": "0.16.0",
     "@discordjs/rest": "0.6.0",
     "consola": "2.15.3",
-    "discord-api-types": "0.37.3",
+    "discord-api-types": "0.37.4",
     "discord.js": "13.10.2",
     "dotenv": "16.0.1"
   }
