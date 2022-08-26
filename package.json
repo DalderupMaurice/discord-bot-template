@@ -6,7 +6,7 @@
   "keywords": [],
   "license": "MIT",
   "main": "dist/index.js",
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "yarn@3.2.3",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
     "build": "tsc -b",
