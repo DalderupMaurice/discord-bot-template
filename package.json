@@ -45,6 +45,6 @@
     "consola": "2.15.3",
     "discord-api-types": "0.37.5",
     "discord.js": "13.10.3",
-    "dotenv": "16.0.1"
+    "dotenv": "16.0.2"
   }
 }
