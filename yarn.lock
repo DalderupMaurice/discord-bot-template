@@ -362,13 +362,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:^2.6.2":
-  version: 2.6.2
-  resolution: "@types/node-fetch@npm:2.6.2"
+"@types/node-fetch@npm:^2.6.3":
+  version: 2.6.3
+  resolution: "@types/node-fetch@npm:2.6.3"
   dependencies:
     "@types/node": "*"
     form-data: ^3.0.0
-  checksum: 6f73b1470000d303d25a6fb92875ea837a216656cb7474f66cdd67bb014aa81a5a11e7ac9c21fe19bee9ecb2ef87c1962bceeaec31386119d1ac86e4c30ad7a6
+  checksum: b68cda58e91535a42dd5337932443c37f8e198ca1e8deeb95bd92a64a9a84d92071867b91c5eb84ee8e13f33d45a70549fe2bc11dd070a894dd561909f4d39f5
   languageName: node
   linkType: hard
 
@@ -437,12 +437,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/ws@npm:^8.5.3":
-  version: 8.5.3
-  resolution: "@types/ws@npm:8.5.3"
+"@types/ws@npm:^8.5.4":
+  version: 8.5.4
+  resolution: "@types/ws@npm:8.5.4"
   dependencies:
     "@types/node": "*"
-  checksum: 0ce46f850d41383fcdc2149bcacc86d7232fa7a233f903d2246dff86e31701a02f8566f40af5f8b56d1834779255c04ec6ec78660fe0f9b2a69cf3d71937e4ae
+  checksum: fefbad20d211929bb996285c4e6f699b12192548afedbe4930ab4384f8a94577c9cd421acaad163cacd36b88649509970a05a0b8f20615b30c501ed5269038d1
   languageName: node
   linkType: hard
 
@@ -1558,20 +1558,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord.js@npm:13.14.0":
-  version: 13.14.0
-  resolution: "discord.js@npm:13.14.0"
+"discord.js@npm:13.15.0":
+  version: 13.15.0
+  resolution: "discord.js@npm:13.15.0"
   dependencies:
     "@discordjs/builders": ^0.16.0
     "@discordjs/collection": ^0.7.0
     "@sapphire/async-queue": ^1.5.0
-    "@types/node-fetch": ^2.6.2
-    "@types/ws": ^8.5.3
+    "@types/node-fetch": ^2.6.3
+    "@types/ws": ^8.5.4
     discord-api-types: ^0.33.5
     form-data: ^4.0.0
     node-fetch: ^2.6.7
-    ws: ^8.9.0
-  checksum: 1eb64e121b2c473f13e9a92639341594f69b4c91f3b616e0942e4123bb8f5696587f6c9d31fe2257273c7923488ff3c530795a144abf91df16e79e2ce84c9597
+    ws: ^8.13.0
+  checksum: 67c8ec36acacd67111a94451bb19b1b731f15b1ebd14f645fead64ab35b2afb4bc395d606d38f7c8a099db6402a2e1c52d2674b674016eac334a57479ec3f4ae
   languageName: node
   linkType: hard
 
@@ -4808,7 +4808,7 @@ resolve@^1.0.0:
     "@yarnpkg/pnpify": 3.1.6
     consola: 2.15.3
     discord-api-types: 0.37.37
-    discord.js: 13.14.0
+    discord.js: 13.15.0
     dotenv: 16.0.3
     eslint: 8.37.0
     eslint-config-airbnb-base: 15.0.0
@@ -5017,18 +5017,18 @@ resolve@^1.0.0:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.9.0":
-  version: 8.9.0
-  resolution: "ws@npm:8.9.0"
+"ws@npm:^8.13.0":
+  version: 8.13.0
+  resolution: "ws@npm:8.13.0"
   peerDependencies:
     bufferutil: ^4.0.1
-    utf-8-validate: ^5.0.2
+    utf-8-validate: ">=5.0.2"
   peerDependenciesMeta:
     bufferutil:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 23aa0f021b2eb65c108ec4c3e08c0d81ba01f82b500432dfe327fd6be36079c1d81fdb0eac6464d2a0eb49904d34a9ab8c59619d673fa07b8346f83aeb0cbf12
+  checksum: 53e991bbf928faf5dc6efac9b8eb9ab6497c69feeb94f963d648b7a3530a720b19ec2e0ec037344257e05a4f35bd9ad04d9de6f289615ffb133282031b18c61c
   languageName: node
   linkType: hard
 
