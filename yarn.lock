@@ -1628,10 +1628,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:0.37.61":
-  version: 0.37.61
-  resolution: "discord-api-types@npm:0.37.61"
-  checksum: fe33d528e31a6de0bab2afb43d0e058957a6da6cfc4d797943fac83aeb8d07543dc0f85cad3c4e6789cbbac0c7ca49dae5ac465224b129c7acb716097fa0b081
+"discord-api-types@npm:0.37.67":
+  version: 0.37.67
+  resolution: "discord-api-types@npm:0.37.67"
+  checksum: 693d8e5062e4032afa58b3dd058af9fcb0891ee4425e044b73f72db95d01fe886116ef853993051e72ee5b36b664a6eaaccc37ab94999f348ac1100c85c02763
   languageName: node
   linkType: hard
 
@@ -5108,7 +5108,7 @@ resolve@^1.0.0:
     "@typescript-eslint/parser": 5.62.0
     "@yarnpkg/pnpify": 3.1.6
     consola: 2.15.3
-    discord-api-types: 0.37.61
+    discord-api-types: 0.37.67
     discord.js: 13.16.0
     dotenv: 16.3.1
     eslint: 8.52.0
