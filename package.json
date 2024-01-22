@@ -14,7 +14,7 @@
     "lint:fix": "eslint --cache --fix \"src/**/*.{ts,tsx}\""
   },
   "devDependencies": {
-    "@types/node": "16.18.73",
+    "@types/node": "16.18.74",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "@yarnpkg/pnpify": "3.1.6",
