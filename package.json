@@ -6,7 +6,7 @@
   "keywords": [],
   "license": "MIT",
   "main": "dist/index.js",
-  "packageManager": "yarn@3.6.4",
+  "packageManager": "yarn@3.7.0",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
     "build": "tsc -b",
@@ -17,7 +17,7 @@
     "@types/node": "16.18.74",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
-    "@yarnpkg/pnpify": "3.1.6",
+    "@yarnpkg/pnpify": "3.1.7",
     "eslint": "8.52.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "16.2.0",
