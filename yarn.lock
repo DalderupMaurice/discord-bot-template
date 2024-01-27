@@ -1497,9 +1497,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord.js@npm:13.16.0":
-  version: 13.16.0
-  resolution: "discord.js@npm:13.16.0"
+"discord.js@npm:13.17.1":
+  version: 13.17.1
+  resolution: "discord.js@npm:13.17.1"
   dependencies:
     "@discordjs/builders": ^0.16.0
     "@discordjs/collection": ^0.7.0
@@ -1510,7 +1510,7 @@ __metadata:
     form-data: ^4.0.0
     node-fetch: ^2.6.7
     ws: ^8.13.0
-  checksum: 42457561d13412d42d6247dec35ac13f5996958ee643be84b8e108326ec9b1420d2216d60527cbaaab10e5f6a5d14a3509ac189e6cf7f72a27e67f77789029c6
+  checksum: d95afd7d74c8c3c87b0748a8cb646cab9493b52d3080ae33afec93fc717733fc91f35749b26f5f816a7f2b0ee3268c289c2b9f6b5c4c2b488d4bb9fb5b489cc9
   languageName: node
   linkType: hard
 
@@ -4829,7 +4829,7 @@ resolve@^1.0.0:
     "@yarnpkg/pnpify": 3.1.7
     consola: 2.15.3
     discord-api-types: 0.37.67
-    discord.js: 13.16.0
+    discord.js: 13.17.1
     dotenv: 16.3.2
     eslint: 8.52.0
     eslint-config-airbnb-base: 15.0.0
