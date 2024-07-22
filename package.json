@@ -42,7 +42,7 @@
   "dependencies": {
     "@discordjs/builders": "0.16.0",
     "@discordjs/rest": "0.6.0",
-    "consola": "2.15.3",
+    "consola": "3.2.3",
     "discord-api-types": "0.37.67",
     "discord.js": "13.17.1",
     "dotenv": "16.4.1"
