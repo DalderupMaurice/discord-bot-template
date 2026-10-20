@@ -393,10 +393,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.18.76":
-  version: 16.18.76
-  resolution: "@types/node@npm:16.18.76"
-  checksum: 8486668c32f0c77a559ad11549192abb1779816a8bf39e7b6679bfeefe792fbd4920f7f9f75ab1518972deb1c31fbf4ed301bd89fc47a3a124875f5092a2b080
+"@types/node@npm:16.18.126":
+  version: 16.18.126
+  resolution: "@types/node@npm:16.18.126"
+  checksum: 86112e7499f8a4d1bb60696cab0bf464adf3c141fca4bc5451e8f3aba5736529b76d4b4396edb21e5d7c19592852f7d6cb81ee70074fd13bde2db2d0db720467
   languageName: node
   linkType: hard
 
@@ -4823,7 +4823,7 @@ resolve@^1.0.0:
   dependencies:
     "@discordjs/builders": 0.16.0
     "@discordjs/rest": 0.6.0
-    "@types/node": 16.18.76
+    "@types/node": 16.18.126
     "@typescript-eslint/eslint-plugin": 5.62.0
     "@typescript-eslint/parser": 5.62.0
     "@yarnpkg/pnpify": 3.1.7
