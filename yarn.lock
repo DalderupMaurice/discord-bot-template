@@ -1297,10 +1297,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"consola@npm:2.15.3":
-  version: 2.15.3
-  resolution: "consola@npm:2.15.3"
-  checksum: 8ef7a09b703ec67ac5c389a372a33b6dc97eda6c9876443a60d76a3076eea0259e7f67a4e54fd5a52f97df73690822d090cf8b7e102b5761348afef7c6d03e28
+"consola@npm:3.4.2":
+  version: 3.4.2
+  resolution: "consola@npm:3.4.2"
+  checksum: 32d1339e0505842f033ca34cb4572a841281caa367f438b785d3b284ab2a06134f009e605908480402c5f57f56c1e3210090c37e6417923416f76ce730d39361
   languageName: node
   linkType: hard
 
@@ -4827,7 +4827,7 @@ resolve@^1.0.0:
     "@typescript-eslint/eslint-plugin": 5.62.0
     "@typescript-eslint/parser": 5.62.0
     "@yarnpkg/pnpify": 3.1.7
-    consola: 2.15.3
+    consola: 3.4.2
     discord-api-types: 0.37.67
     discord.js: 13.17.1
     dotenv: 16.4.1
