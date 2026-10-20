@@ -1532,10 +1532,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:16.4.1":
-  version: 16.4.1
-  resolution: "dotenv@npm:16.4.1"
-  checksum: a343f0a1d156deef8c60034f797969867af4dbccfacedd4ac15fad04547e7ffe0553b58fc3b27a5837950f0d977e38e9234943fbcec4aeced4e3d044309a76ab
+"dotenv@npm:16.6.1":
+  version: 16.6.1
+  resolution: "dotenv@npm:16.6.1"
+  checksum: e8bd63c9a37f57934f7938a9cf35de698097fadf980cb6edb61d33b3e424ceccfe4d10f37130b904a973b9038627c2646a3365a904b4406514ea94d7f1816b69
   languageName: node
   linkType: hard
 
@@ -4830,7 +4830,7 @@ resolve@^1.0.0:
     consola: 2.15.3
     discord-api-types: 0.37.67
     discord.js: 13.17.1
-    dotenv: 16.4.1
+    dotenv: 16.6.1
     eslint: 8.56.0
     eslint-config-airbnb-base: 15.0.0
     eslint-config-airbnb-typescript: 16.2.0
